@@ -1,0 +1,15 @@
+.env
+.venv/
+SETUP_LOG.md
+approvals.db
+__pycache__/
+**pycache**/
+.pytest_cache/
+.DS_Store
+*.py[cod]
+*.db
+*.db-shm
+*.db-wal
+*.db-journal
+analytics/
+eval/results.json
