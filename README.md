@@ -131,19 +131,7 @@ Switch personas in the sidebar and ask *"What is the salary band and pay range f
 
 ---
 
-## 5. Demo script (≈15 minutes)
-
-| Min | Persona | Action | Point to make |
-|---|---|---|---|
-| 0–2 | — | Show the architecture slide and this PoC diagram | "PoC validates assumptions; it is not production." |
-| 2–4 | Employee | Leave carry-forward in **Arabic** | Grounded, cited, answered in Arabic |
-| 4–6 | Employee → HR | Salary band question, then switch persona | Same question, different evidence; filter applied in the search |
-| 6–8 | Employee | Conference question (poisoned document) | Instruction in a document is data; external e-mail never appears |
-| 8–10 | Employee | INC001234, then toggle **ServiceNow outage** and ask again | Status only from the tool; honest failure |
-| 10–13 | Employee | Access request → approval panel → approve → RITM number; then "skip approval" | Execution only from APPROVED; bypass impossible |
-| 13–15 | — | App Insights trace + `eval/results.md` + analytics log | Every request traceable; every release gated |
-
-## 6. Troubleshooting
+## 5. Troubleshooting
 
 | Symptom | Fix |
 |---|---|
@@ -156,7 +144,7 @@ Switch personas in the sidebar and ask *"What is the salary band and pay range f
 | Model answers without citations | Check `search_policies` was called (Behind the scenes); try a stronger tool-calling model |
 | Model not available in UAE region | Record as a Gate 1 finding; use another sandbox region for the PoC only |
 
-## 7. From PoC to production
+## 6. From PoC to production
 
 | PoC | Production |
 |---|---|
@@ -169,7 +157,7 @@ Switch personas in the sidebar and ask *"What is the salary band and pay range f
 | Agent Framework agent in a local process | Same agent hosted as a containerised service (or Foundry-hosted agent) behind APIM |
 | `eval/run_eval.py` | Azure DevOps evaluation gate + Foundry evaluators on the gold EN/AR set |
 
-## 8. Repository map
+## 7. Repository map
 
 ```
 poc/config.py         settings + Azure clients (Entra or key auth)
